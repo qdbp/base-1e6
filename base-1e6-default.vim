@@ -1,16 +1,16 @@
-" base16-vim (https://github.com/chriskempson/base16-vim)
-" by Chris Kempson (http://chriskempson.com)
-" Tomorrow Night scheme by Chris Kempson (http://chriskempson.com)
-
-" This enables the coresponding base16-shell script to run so that
-" :colorscheme works in terminals supported by base16-shell scripts
-" User must set this variable in .vimrc
-"   let g:base16_shell_path=base16-builder/output/shell/
+" The colours of today... today!
+" 
+" For truecolor terminals / vim loadouts.
+" set termguicolors is mandatory
+"
+" Inspired by and based on the wonderful Base 16:
+"   base16-vim (https://github.com/chriskempson/base16-vim)
+"   by Chris Kempson (http://chriskempson.com)
 " Theme setup
 "
 hi clear
 syntax reset
-let g:colors_name = ""
+let g:colors_name = "base-1e6-default"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, attr, guisp)
