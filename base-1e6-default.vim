@@ -43,41 +43,52 @@ let s:light_02 = "#c8c8c8"
 let s:light_03 = "#d8d8d8"
 let s:light_04 = "#e8e8e8"
 
-" [tone, color, desat, tint, shade]
+" [tone, hue, desat, tint, shade]
 let s:color_00 = ["#bf738c", "#bf3965", "", "", ""]
 let s:color_ErrorMsg  = s:color_00[1]
 let s:color_Exception = s:color_00[0]
+
 let s:color_01 = ["#bf6956", "#bf4626", "#bf978f", "", ""]
 let s:color_Statement = s:color_01[0]
 let s:color_Keyword   = s:color_01[0]
 let s:color_Delimiter = s:color_01[2]
+
 let s:color_02 = ["#dc9656", "#dc8c42", "#dcba9a"]
 let s:color_Repeat      = s:color_02[0]
 let s:color_Conditional = s:color_02[0]
 let s:color_Operator    = s:color_02[2]
-let s:color_03 = ["#f7ca88"]
+
+let s:color_03 = ["#f7ca88", "", "#e6caa1"]
 let s:color_Function  = s:color_03[0]
 let s:color_Label     = s:color_03[0]
 let s:color_PreProc   = s:color_03[0]
+
 let s:color_04 = ["#bfbb75", "", "#cccaa3"]
 let s:color_String = s:color_04[0]
+
 let s:color_05 = ["#99bf77"]
 let s:color_Character   = s:color_05[0]
+
 let s:color_06 = ["#7bba86", "", "#acc7ae"]
 let s:color_SpecialChar = s:color_06[0]
-let s:color_07 = ["#86c1b9"]
-let s:color_Special = s:color_07[0]
+
+let s:color_07 = ["#82bab3", "", "#a4c1bd"]
+let s:color_Float  = s:color_07[0]
+let s:color_Number = s:color_07[0]
+
 let s:color_08 = ["#7cafc2"]
-let s:color_Float  = s:color_08[0]
-let s:color_Number = s:color_08[0]
+let s:color_Builtin  = s:color_08[0]
+let s:color_Constant = s:color_08[0]
+let s:color_Boolean  = s:color_08[0]
+
 let s:color_09 = ["#8098c4", "", "#b1b8c4"]
-let s:color_Constant = s:color_09[0]
-let s:color_Boolean  = s:color_09[0]
-let s:color_Builtin  = s:color_09[0]
+let s:color_Type         = s:color_09[0]
+
 let s:color_0a = ["#988abd", "",  "#a49bbd"]
+let s:color_Special      = s:color_0a[0]
 let s:color_Structure    = s:color_0a[0]
-let s:color_Type         = s:color_0a[0]
 let s:color_ExceptionObj = s:color_0a[0]
+
 let s:color_0b = ["#ba8baf"]
 let s:color_Include = s:color_0b[0]
 
@@ -140,7 +151,7 @@ call <sid>hi("Tag",          s:color_03[0], "", "", "")
 call <sid>hi("Structure",    s:color_Structure, "", "bold", "")
 call <sid>hi("Include",      s:color_Include, "", "bold", "")
 call <sid>hi("Delimiter",    s:color_Delimiter, "", "", "")
-call <sid>hi("Type",         s:color_Type, "", "bold", "")
+call <sid>hi("Type",         s:color_Type, "", "", "")
 call <sid>hi("ConId",        s:color_Type, "", "bold", "")
 call <sid>hi("Statement",    s:color_Statement, "", "bold", "")
 call <sid>hi("Keyword",      s:color_Keyword, "", "bold", "")
@@ -176,6 +187,7 @@ call <sid>hi("hsDelimiter",    s:color_Delimiter, "", "bold", "")
 " C highlighting
 call <sid>hi("cOperator",   s:color_Operator, "", "", "")
 call <sid>hi("cPreCondit",  s:color_0a[0], "", "", "")
+call <sid>hi("cType",       s:color_Type, "", "", "")
 
 " C# highlighting
 call <sid>hi("csClass",                 s:color_03[0], "", "", "")
